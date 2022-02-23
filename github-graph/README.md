@@ -18,7 +18,7 @@
 
 ### Demo
 
-![](/Users/o98k-ok/Documents/code/ok-scriptables/github-graph/assets/2022-02-23-22-26-19-image.png)
+![](./assets/2022-02-23-22-26-19-image.png)
 
 ### Others
 
