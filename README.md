@@ -4,4 +4,4 @@ scriptable flows via js
 
 ### List
 
-1. [GithubGraph](https://github.com/o98k-ok/ok-scriptables/github-graph): github contributions graph.
+1. [GithubGraph](./github-graph): github contributions graph.
