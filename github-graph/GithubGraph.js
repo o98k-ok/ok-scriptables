@@ -48,16 +48,8 @@ function myFunction(value, index, array) {
 let lenth = array.length
 let stack = widget.addStack();
 stack.spacing = 2;
+stack.setPadding(0, 0, 0, 100);
 
-let row = stack.addStack();
-row.layoutVertically();
-row.spacing = 2;
-row.topAlignContent()
-for (let i=0; i<7; i++) {
-  let cell = row.addStack();
-  cell.size = new Size(50, 17);
-  cell.addText(weeknames[i])
-}
 
 
 for (let i=0; i<array.length; i++) {
@@ -72,4 +64,24 @@ for (let i=0; i<array.length; i++) {
   cell.backgroundColor = new Color(array[array.length-i-1]["color"]);
 }
 
+let gradient = new LinearGradient()
+gradient.colors = [Color.white(), Color.green()]
+gradient.locations = [0.0, 1]
+
+
+row = stack.addStack();
+row.layoutVertically();
+row.spacing = 2;
+row.topAlignContent()
+for (let i=0; i<7; i++) {
+  let cell = row.addStack();
+  cell.size = new Size(40, 17);
+  let txt = cell.addText(weeknames[i]);
+  txt.font = new Font("Courier", 15);
+  cell.cornerRadius = 5;
+  cell.backgroundGradient = gradient;
+}
+
+
 widget.presentMedium()
+
